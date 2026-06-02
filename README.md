@@ -1,5 +1,9 @@
 # AgentFrame: Consulting Prep
 
+<p align="center">
+  <img src=".github/readme-assets/banner.png" alt="AgentFrame: Consulting Prep — a consulting-recruiting workspace inside your AI coding agent" width="100%" />
+</p>
+
 > **A starter kit for consulting recruiting that lives inside your AI coding agent.** Case practice + tailored
 > applications, as markdown + skills you can read and rewrite. It's got the bones — the point is that *you*
 > take it from here.
