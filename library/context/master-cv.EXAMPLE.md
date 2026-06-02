@@ -29,7 +29,7 @@ priya.raman@email.com | linkedin.com/in/priyaraman | (416) 555-0142 | Toronto, O
 ## Projects & Leadership
 - **Case Competition Circuit** — top-4 finish at two national undergraduate case competitions; led the
   quantitative section both times (market sizing + profitability).
-- **AI-for-Research mini-project** — built a small AI workflow that produces cited company teardowns for case
+- **AI-for-Research mini-project** — built a small AI workflow that produces cited company breakdowns for case
   prep; wrote it up as a short how-to for my cohort.
 - **Rotman Commerce Women in Business** — VP Events; ran a 120-person networking night.
 

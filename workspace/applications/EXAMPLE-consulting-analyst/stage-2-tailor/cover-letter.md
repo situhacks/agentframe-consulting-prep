@@ -23,7 +23,7 @@ built the slide the recommendation rested on. It held up when our advisor pushed
 number from the ground up rather than borrowing one.
 
 I also try to use AI the way a good analyst should — as a tool I check, not one I trust blindly. I built a
-small workflow that produces cited company teardowns for case prep, and the habit it taught me is to make the
+small workflow that produces cited company breakdowns for case prep, and the habit it taught me is to make the
 model show its sources and challenge its own logic. That's the posture I'd want on a client team moving fast
 with new tools.
 

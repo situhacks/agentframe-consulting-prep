@@ -24,7 +24,7 @@ in an interview and (b) aim their resume/cover letter at what {TARGET} actually 
 </context>
 
 <task>
-Produce a cited teardown of {TARGET}. Return EXACTLY these sections:
+Produce a cited research brief of {TARGET}. Return EXACTLY these sections:
 
 1. Say-this-in-the-interview — the 3-5 sharpest, most current things a candidate should know/say.
 2. What they do — core business, how they make money, scale.
@@ -38,5 +38,5 @@ Produce a cited teardown of {TARGET}. Return EXACTLY these sections:
 
 ---
 
-> When writing a DR prompt for something OTHER than a company teardown, keep the same `<role>/<constraints>/
+> When writing a DR prompt for something OTHER than a company research, keep the same `<role>/<constraints>/
 > <context>/<task>` skeleton and the three must-adds (audience, what-NOT-to-include, explicit output format).

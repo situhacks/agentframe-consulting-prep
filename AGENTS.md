@@ -17,7 +17,7 @@ and **job applications**. You (the agent) run skills on the user's own data. The
 | Prep / practice behavioral answers ("why consulting", "how do you use AI", a time you led) | Build + mock from their real stories | `skills/behavioral/` |
 | Tailor a resume to a job | JD + their master CV → one-page CV (markdown) | `skills/cv/` |
 | Write a cover letter | JD + their CV + voice → one-page letter (markdown) | `skills/cover-letter/` |
-| Research a target firm/market | Cited teardown (Gemini Deep Research prompt) | `skills/company-teardown/` |
+| Research a target firm/market | Cited research brief (Gemini Deep Research prompt) | `skills/company-research/` |
 | Turn a CV/letter into an editable doc | markdown → .docx | `skills/doc-export/` |
 | Give feedback to improve outputs | Update their voice / positioning | `skills/learn/` |
 

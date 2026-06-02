@@ -8,8 +8,8 @@ Empty until you apply to something. Each job gets a folder: `{company}/`
 ```
 {company}/
 ├── application.md          # state: company, role, JD (verbatim), stage, status
-├── stage-1-research/       # company-teardown output (optional, "know the firm")
-│   └── teardown-brief.md
+├── stage-1-research/       # company-research output (optional, "know the firm")
+│   └── research-brief.md
 └── stage-2-tailor/         # the deliverables
     ├── cv.md
     ├── cover-letter.md

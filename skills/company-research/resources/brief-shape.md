@@ -1,9 +1,9 @@
-# Teardown brief shape
+# Research brief shape
 
 The synthesized output. Lead with what's useful; don't dump.
 
 ```
-# {TARGET} — Teardown
+# {TARGET} — Research Brief
 _Researched {date}. Sources at bottom._
 
 ## Say-this-in-the-interview (top)

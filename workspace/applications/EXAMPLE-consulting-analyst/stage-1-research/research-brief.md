@@ -1,6 +1,6 @@
-<!-- EXAMPLE teardown — fictional firm. Shows what company-teardown produces. -->
+<!-- EXAMPLE research brief — fictional firm. Shows what company-research produces. -->
 
-# Meridian & Co. — Teardown
+# Meridian & Co. — Research Brief
 _Researched 2026-06-01 (example). Fictional firm; illustrative content._
 
 ## Say-this-in-the-interview (top)
@@ -25,4 +25,4 @@ multi-month client engagements. Analysts staff client teams directly.
 - AI-enabled delivery, operations practice, campus hiring.
 
 ## Sources
-- (example only — a real teardown cites live sources from the Deep Research run)
+- (example only — a real research brief cites live sources from the Deep Research run)

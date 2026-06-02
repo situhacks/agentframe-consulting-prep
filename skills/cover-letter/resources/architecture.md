@@ -18,9 +18,9 @@ writing a Month-1/Month-2 plan inside the letter, stop: you're 3x over budget.
 
 1. **H — Hook (~30–50 words):** a HYPERSPECIFIC observation about THIS firm that an LLM couldn't hallucinate —
    a recent engagement/practice they're growing, a partner's stated POV, something real about *them*.
-   **This requires the company teardown** (`stage-1-research/teardown-brief.md`). NOT a truism about consulting
+   **This requires the company research** (`stage-1-research/research-brief.md`). NOT a truism about consulting
    ("the best slides are owned end to end"), NOT praise ("I admire your firm"), NOT a JD recital. If you have
-   no real specific about the firm, you cannot write a real hook — get the teardown first.
+   no real specific about the firm, you cannot write a real hook — get the research brief first.
 2. **C — Connection (~40–60 words):** ONE granular past experience mapped to ONE thing this firm does. A single
    deep thread, not a tour of every job.
 3. **P — Proof (~20–40 words):** ONE quantified outcome, in a sentence. Give the reader one concrete thing to remember.

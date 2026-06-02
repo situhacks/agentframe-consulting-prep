@@ -1,9 +1,9 @@
 ---
-name: company-teardown
-description: Produce a cited teardown of a target firm or market, using a Gemini Deep Research prompt.
+name: company-research
+description: Produce a cited research brief of a target firm or market, using a Gemini Deep Research prompt.
 ---
 
-# company-teardown
+# company-research
 
 Build a cited briefing on a target company or market — for "know the firm" interview prep and for aiming an
 application. Research happens IN PREP FOR an application (it's stage 1 of an application workspace).
@@ -12,13 +12,13 @@ application. Research happens IN PREP FOR an application (it's stage 1 of an app
 1. **Frame the target.** Company or market the user named.
 2. **Write a Deep Research prompt** using `resources/dr-prompt-template.md`, filled for this target. It follows
    Google's recommended structure — see `resources/dr-best-practices.md` (apply the same shape if you ever
-   write a DR prompt for anything other than a teardown).
+   write a DR prompt for anything other than a research brief).
 3. **Hand it to the user to run** in Gemini Deep Research (this system uses the prompt path, not an API). Ask
    them to paste the result back.
-4. **Synthesize** the returned research into a clean teardown brief (see `resources/brief-shape.md`):
+4. **Synthesize** the returned research into a clean research brief (see `resources/brief-shape.md`):
    what the firm does, recent strategy/news, competitive position, where they're investing, and the
    2–3 things to actually say in an interview. Keep citations.
-5. **Write** to `workspace/applications/{company}/stage-1-research/teardown-brief.md` (create the application
+5. **Write** to `workspace/applications/{company}/stage-1-research/research-brief.md` (create the application
    folder if this is the start of one).
 
 ## Rules

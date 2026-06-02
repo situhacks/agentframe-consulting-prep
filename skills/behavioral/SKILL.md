@@ -14,7 +14,7 @@ helps the user build and practice those answers from their **real stories**, not
 ### Build an answer
 1. Identify the question type (leadership, conflict, failure, "why consulting/firm", AI-experience).
 2. Pull the best-matching story: scan the ROSTER lines of `library/context/stories/*.md` (cheap), read the 1–2
-   that fit. For "why firm", use `positioning.md` + any `stage-1-research/teardown-brief.md`.
+   that fit. For "why firm", use `positioning.md` + any `stage-1-research/research-brief.md`.
 3. Shape it as **STAR+R** (Situation, Task, Action, Result, Reflection) — tight, spoken-length (~60–90 seconds),
    in the user's voice (`voice.md`). Lead with the headline; don't bury it.
 4. For **"how do you use AI"**: emphasize JUDGMENT, not tool name-dropping — Context → Tool → Judgment →

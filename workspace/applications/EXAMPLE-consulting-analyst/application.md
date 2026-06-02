@@ -47,5 +47,5 @@ and turning ambiguous problems into structured, defensible recommendations.
 - an AI-native angle (a tool or workflow you built) — increasingly asked
 
 ## Next steps
-- stage-1-research/ → teardown of Meridian (know-the-firm)
+- stage-1-research/ → research brief on Meridian (know-the-firm)
 - stage-2-tailor/ → tailored CV + cover letter

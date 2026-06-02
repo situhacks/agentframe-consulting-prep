@@ -18,8 +18,8 @@ Write a tight, one-page cover letter from the JD + the user's CV + voice.
    `positioning.md`. For stories: scan only the ROSTER line (first line) of each `stories/*.md` to pick the
    1–2 best, then read the full body of just those.
 2. **Get the hook material.** The Hook must be a real, firm-specific observation (see architecture.md). Read
-   `stage-1-research/teardown-brief.md` if it exists. **If there's no teardown and you have nothing real to
-   say about THIS firm, stop and either run `company-teardown` first or ask the user for a specific** — do not
+   `stage-1-research/research-brief.md` if it exists. **If there's no research brief and you have nothing real to
+   say about THIS firm, stop and either run `company-research` first or ask the user for a specific** — do not
    ship a generic consulting truism as the hook.
 3. Draft using the **HCPA** structure (`resources/architecture.md`): Hook → Connection → Proof → Ask.
 4. Apply the voice rules. **Respect the hard word ceiling** (Tier-1/Big-4 consulting: 150–180, max 200 — see
@@ -31,7 +31,7 @@ Write a tight, one-page cover letter from the JD + the user's CV + voice.
 ## Self-critique pass (do this every time, before showing the draft)
 Check the draft against these — fix any that fail:
 - [ ] Is the Hook a real Meridian/firm specific an LLM couldn't have guessed? (If it's a truism about
-      consulting or generic praise → rewrite from the teardown.)
+      consulting or generic praise → rewrite from the research brief.)
 - [ ] Word count within the vertical's ceiling? (Count it. Over → cut.)
 - [ ] Exactly ONE proof story with a quantified outcome? (Not a tour of jobs.)
 - [ ] No buzzwords / no "I'd be a great fit" / no "I am writing to express interest"?
@@ -46,7 +46,7 @@ That polished markdown is the real product; the student copies it into their own
 
 ## Rules
 - Open with a real hook, not "I am writing to express my interest in...".
-- Connect to THIS firm/role specifically (use positioning + teardown if one exists).
+- Connect to THIS firm/role specifically (use positioning + research brief if one exists).
 - Prove with one concrete story, not adjectives.
 - One page. No filler. Match the user's voice, not corporate boilerplate.
 - Iterate on the markdown until it lands — don't rush to export.
