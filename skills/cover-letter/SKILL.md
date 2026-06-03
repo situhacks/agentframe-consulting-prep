@@ -10,11 +10,13 @@ Write a tight, one-page cover letter from the JD + the user's CV + voice.
 ## Before you start (cold-start check)
 - If `library/context/master-cv.md` is FILL-ME → build it first (see the `cv` skill's onboarding). (`*.EXAMPLE.md`
   files are a filled sample showing the shape — not the user's data.)
-- If `library/context/voice.md` is FILL-ME → ask for a short writing sample or how they want to sound, fill it,
-  then continue. A letter in a generic voice reads as AI — the voice file is what prevents that.
+- If `library/context/voice/` still holds `[placeholder]` templates → the voice isn't built. Run the voice build
+  (`library/context/voice/README.md`) first, or at minimum gather one writing sample and seed the profile + a
+  pair — don't draft against placeholders. A letter in a generic voice reads as AI; the voice system prevents that.
 
 ## Steps
-1. Read the saved JD (`workspace/applications/{company}/application.md`), `master-cv.md`, `voice.md`, and
+1. Read the saved JD (`workspace/applications/{company}/application.md`), `master-cv.md`, the voice system
+   (`voice/identity.md` + `voice/voice-profile.md` + `voice/pairs/` cover-letter-register pairs), and
    `positioning.md`. For stories: scan only the ROSTER line (first line) of each `stories/*.md` to pick the
    1–2 best, then read the full body of just those.
 2. **Get the hook material.** The Hook must be a real, firm-specific observation (see architecture.md). Read
@@ -35,7 +37,8 @@ Check the draft against these — fix any that fail:
 - [ ] Word count within the vertical's ceiling? (Count it. Over → cut.)
 - [ ] Exactly ONE proof story with a quantified outcome? (Not a tour of jobs.)
 - [ ] No buzzwords / no "I'd be a great fit" / no "I am writing to express interest"?
-- [ ] Does it sound like the user's `voice.md`, not generic AI?
+- [ ] Does it sound like the user's voice (generated from `voice/pairs/` + `voice-profile.md`), not generic AI?
+      Run the `humanizer` skill to strip generic-AI tells.
 - [ ] Would paragraph 1 make a busy recruiter read paragraph 2?
 
 ## The output goal is the markdown

@@ -19,11 +19,13 @@ and **job applications**. You (the agent) run skills on the user's own data. The
 | Write a cover letter | JD + their CV + voice → one-page letter (markdown) | `skills/cover-letter/` |
 | Research a target firm/market | Cited research brief (Gemini Deep Research prompt) | `skills/company-research/` |
 | Turn a CV/letter into an editable doc | markdown → .docx | `skills/doc-export/` |
-| Give feedback to improve outputs | Update their voice / positioning | `skills/learn/` |
+| Give feedback to improve outputs | Harvest it into their voice pairs / positioning | `skills/learn/` |
+| Change the system itself (edit/add a skill, add cases, build their voice, change a behavior) | Load the builder mindset, then make the change | `skills/builder/` |
 
 Personal brand / LinkedIn content is NOT here — that's a separate system (AgentFrame Marketing). Don't build it.
 
-`skills/docx/` is a helper (Anthropic's Word toolkit) that `doc-export` uses — not a user-facing route.
+Helper skills (not user-facing routes): `skills/docx/` (Word toolkit, used by `doc-export`) and
+`skills/humanizer/` (strips generic-AI tells, used in the voice flow).
 
 ---
 
@@ -36,7 +38,7 @@ and ask the user for the reference, then write the file.** Don't generate from e
 | If the user wants... | And this is still FILL-ME... | Ask for... |
 |---|---|---|
 | a tailored CV / cover letter | `library/context/master-cv.md` | their current resume — then build the master CV from it |
-| voice in their letters | `library/context/voice.md` | a writing sample, or how they want to sound |
+| voice in their letters/answers | `library/context/voice/` (still `[placeholder]` templates) | run the voice build in `library/context/voice/README.md` — don't draft against placeholders |
 | firm-aware tailoring | `library/context/positioning.md` | their target firms / track (MBB? Big 4? Accenture?) |
 | behavioral stories | `library/context/stories/` | their 2-3 strongest stories (STAR+R) |
 
@@ -86,7 +88,8 @@ case review, push back on weak structure and bad math — that's the value.
 
 ## Where things live
 
-- `library/context/` — the user's own data (CV, stories, voice, positioning). The tailoring source.
+- `library/context/` — the user's own data: master-cv, stories, positioning, and the `voice/` system (how the
+  kit learns to write like them — built from their own samples; see `voice/README.md`). The tailoring source.
 - `library/cases/` — the case bank (markdown) + `case-tracker.md` (the index + what's been run).
 - `library/frameworks/` — consulting frameworks (gcamilo/management-consulting). Reference for case work.
 - `workspace/applications/{company}/` — one folder per job. The folders ARE the pipeline; list them to see state.

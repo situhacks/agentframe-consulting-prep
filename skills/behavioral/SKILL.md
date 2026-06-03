@@ -16,7 +16,8 @@ helps the user build and practice those answers from their **real stories**, not
 2. Pull the best-matching story: scan the ROSTER lines of `library/context/stories/*.md` (cheap), read the 1–2
    that fit. For "why firm", use `positioning.md` + any `stage-1-research/research-brief.md`.
 3. Shape it as **STAR+R** (Situation, Task, Action, Result, Reflection) — tight, spoken-length (~60–90 seconds),
-   in the user's voice (`voice.md`). Lead with the headline; don't bury it.
+   in the user's voice (load `voice/voice-profile.md` + the `voice/pairs/` behavioral-register pairs). Lead with
+   the headline; don't bury it.
 4. For **"how do you use AI"**: emphasize JUDGMENT, not tool name-dropping — Context → Tool → Judgment →
    Outcome. Show you checked the output, caught a flaw, used it as a tool you audit. (That's what firms reward;
    it mirrors the orchestrate-and-audit spine.)

@@ -85,7 +85,8 @@ and the agent asks for what it needs. Tell it *"tailor my resume to this job"* a
 it'll notice your resume is empty, ask you to paste it in, build your master CV and a couple of stories from it,
 and then carry on. One paste, and you're set up for everything after.
 
-If you'd rather prime it up front, you can open `library/context/master-cv.md`, `voice.md`, and `positioning.md`
+If you'd rather prime it up front, you can open `library/context/master-cv.md`, `positioning.md`, and the
+`voice/` system
 and fill them yourself — but the on-demand path is easier and the agent handles it cleanly.
 
 ### 5 — Add your own case interviews
@@ -164,8 +165,10 @@ Each skill is a folder with a `SKILL.md`. They're just prompts — read them, re
 | `cover-letter` | Writes a one-page cover letter (markdown, HCPA) in your voice; also drafts networking outreach |
 | `company-research` | Writes you a best-practice Gemini Deep Research prompt, then turns the result into a cited brief on the firm or market |
 | `doc-export` | Rough first-draft export of your markdown to a Google Doc or Word `.docx` — you finish the formatting |
+| `learn` | Folds your feedback back into your voice (as before/after pairs) and positioning, so outputs get more *you* over time |
+| `builder` | The mindset for changing the kit — loads when you want to edit a skill, add cases, build your voice, or change a behavior |
 | `docx` | Anthropic's Word toolkit (a helper `doc-export` uses) |
-| `learn` | Captures your feedback and updates your voice / positioning over time |
+| `humanizer` | Strips generic-AI tells from a draft — a helper used in the voice flow |
 
 ### Workspace (where your work lives)
 
@@ -178,7 +181,7 @@ Each skill is a folder with a `SKILL.md`. They're just prompts — read them, re
 
 | Folder | Holds |
 | --- | --- |
-| `library/context/` | Your CV, stories, voice, positioning (the system fills these on first run) |
+| `library/context/` | Your CV, stories, positioning, and the `voice/` system (it learns to write like you from your own samples — examples over rules). Filled on first run. |
 | `library/cases/` | The case bank + `case-tracker.md` (the index + no-repeat ledger) |
 | `library/frameworks/` | A lean framework index + the evidence-labeling discipline |
 
@@ -207,13 +210,16 @@ A few ideas shape the kit. They're also a decent starting template if you want t
 
 ## Make it yours
 
-The expected workflow is: use it for a bit, then start changing it. Some easy first moves:
+The expected workflow is to use it for a bit and then start changing it, and when you want to change something
+the agent loads the `builder` skill, which carries the principles for shaping the kit well (light files, examples
+over rules, every change traced to what you wanted). Some easy first moves:
 
-- **Rewrite a skill you don't like.** Open its `SKILL.md` and change how it behaves. That's the fastest way to
-  learn how the whole thing works.
+- **Rewrite a skill you don't like.** Open its `SKILL.md` and change how it behaves — that's the fastest way to
+  learn how the whole thing works, and it's exactly what the `builder` skill is there to help with.
 - **Add cases.** Drop a casebook in, convert it to markdown under `library/cases/`, add rows to `case-tracker.md`.
-- **Teach it your voice.** Tell it "too formal" or "lead with this story" and the `learn` skill updates your
-  `voice.md` / `positioning.md` — or just edit those files directly.
+- **Teach it your voice.** The `voice/` system learns how you write from your own samples — past cover letters,
+  emails, writing you admire — and turns your feedback into before/after pairs (examples beat rules). Build it
+  once via `library/context/voice/README.md`, and it gets more *you* every time you correct a draft.
 - **Add a skill it's missing.** Want interview-scheduling, a thank-you-note writer, a networking tracker? Copy
   an existing skill folder as a template and build it.
 - **Wire up a tool.** Connect Composio (below) to reach Google Docs / Gmail / Calendar from inside the agent.
@@ -250,7 +256,8 @@ agentframe-consulting-prep/
 │   ├── context/              # your CV, stories, voice, positioning, connectors note
 │   ├── cases/                # case bank (copyrighted bodies gitignored) + case-tracker.md
 │   └── frameworks/           # frameworks-index + evidence-standards (distilled, credited)
-├── skills/                   # run-case, case-reviewer, behavioral, cv, cover-letter, company-research, doc-export, docx, learn
+├── skills/                   # run-case, case-reviewer, behavioral, cv, cover-letter, company-research,
+│                             #   doc-export, learn, builder, + helpers (docx, humanizer)
 └── workspace/
     ├── case-prep/            # one folder per case practiced
     └── applications/         # one folder per job (see EXAMPLE-consulting-analyst/)
@@ -270,6 +277,8 @@ agentframe-consulting-prep/
 - **[Composio](https://composio.dev)** — the optional connector hub.
 - **[Gemini Deep Research](https://gemini.google/overview/deep-research/)** — the research path for company briefs.
 - **[Anthropic skills](https://github.com/anthropics/skills)** — the vendored `docx` toolkit.
+- **[blader/humanizer](https://github.com/blader/humanizer)** (MIT) — the vendored `humanizer` skill for voice calibration.
+- The voice-system architecture is adapted from [AgentFrame: Marketing](https://github.com/situhacks/agentframe-marketing)'s generative voice system.
 - Case content belongs to its respective publishers and is not distributed here.
 
 ## License

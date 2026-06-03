@@ -34,7 +34,7 @@ Turn a JD + the user's master CV into a tailored, one-page CV.
 
 ## The output goal is the markdown
 **The deliverable is a sharp `cv.md` — that's what you're optimizing.** Iterate it as many times as the user
-wants: tighten bullets, re-tailor to the JD, run it through their voice, cut to one page. Get the *content*
+wants: tighten bullets, re-tailor to the JD, run it through their voice (`voice/voice-profile.md`), cut to one page. Get the *content*
 right. That polished markdown is the real product; the student copies it into their own Word/Google Doc for the
 final formatting pass (see `doc-export` — the .docx export is a rough first draft, not the finished look).
 
