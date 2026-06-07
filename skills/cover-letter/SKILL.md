@@ -38,7 +38,7 @@ Check the draft against these — fix any that fail:
 - [ ] Exactly ONE proof story with a quantified outcome? (Not a tour of jobs.)
 - [ ] No buzzwords / no "I'd be a great fit" / no "I am writing to express interest"?
 - [ ] Does it sound like the user's voice (generated from `voice/pairs/` + `voice-profile.md`), not generic AI?
-      Run the `humanizer` skill to strip generic-AI tells.
+      Run the `humanizer` skill (invoke it via the Skill tool) to strip generic-AI tells.
 - [ ] Would paragraph 1 make a busy recruiter read paragraph 2?
 
 ## The output goal is the markdown
