@@ -58,6 +58,9 @@ Review a completed case as a tough, fair coach. Always write a `debrief.md`.
 - `library/frameworks/case-quality-bar.md` — the good-vs-bad standard for issue trees and recommendations.
   This is the bar to grade against (MECE-and-specific vs canned; answer-first with "so what" + risks +
   counter-argument vs platitudes). Use it to make feedback concrete, not vibes.
+- `library/frameworks/case-flow.md` — the 3-stage standard to grade the *flow* against: did they verify
+  PROBLEM vs GOAL up front, stay hypothesis-driven, synthesize as they went, and close answer-first (elevator
+  test)? Name which stage broke down.
 - `library/frameworks/frameworks-index.md` — to judge whether their structure fit the problem.
 - `library/frameworks/evidence-standards.md` — coach the [F]/[I]/[A]/[E] habit: did they flag assumptions vs.
   state guesses as facts? That's a real differentiator — call it out.

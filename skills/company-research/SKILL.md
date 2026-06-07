@@ -9,7 +9,10 @@ Build a cited briefing on a target company or market — for "know the firm" int
 application. Research happens IN PREP FOR an application (it's stage 1 of an application workspace).
 
 ## Steps
-1. **Frame the target.** Company or market the user named.
+1. **Frame the target.** Company or market the user named. If it sits in a covered industry, skim
+   `library/frameworks/industries/_index.md` and load that one file for a quick prior (profit model, trends,
+   landscape) — it sharpens the research prompt and gives you a frame to check the returned research against.
+   It's a prior, not a citable source.
 2. **Write a Deep Research prompt** using `resources/dr-prompt-template.md`, filled for this target. It follows
    Google's recommended structure — see `resources/dr-best-practices.md` (apply the same shape if you ever
    write a DR prompt for anything other than a research brief).

@@ -31,7 +31,10 @@ Run a case interview as the **interviewer**. The user is the interviewee and ans
    read the whole casebook folder. The file holds the full case text as written; you read it and decide, from
    the casebook's own headings (Case Question vs. Interviewer Briefing / Key Facts / Exhibits / Model Answer),
    what to give aloud vs. withhold. (References, consult don't dump: `library/frameworks/frameworks-index.md`
-   for framework names/when-to-use; `case-quality-bar.md` for the good-vs-bad bar when nudging weak structure.)
+   for framework names/when-to-use; `case-quality-bar.md` for the good-vs-bad bar when nudging weak structure;
+   `case-flow.md` for the stages to run the candidate through. If the case sits in a covered industry, scan
+   `library/frameworks/industries/_index.md` and load ONLY that industry's file for sharper questions — never
+   feed it as case data.)
 3. **Set up the session.** Create `workspace/case-prep/{YYYY-MM-DD}-{case-slug}/` with a `session.md`
    (case #, name, date, status: in-progress).
 4. **Start the role-play.** Announce it clearly so the user knows the case has begun: "Okay — case starting now.
@@ -71,6 +74,9 @@ Then carry on with the case either way — don't block on it.
 ## Reference
 - `resources/interviewer-style.md` — how to run interviewer-led (McKinsey) vs interviewee-led (BCG/Bain),
   pacing, and the no-sycophancy rule. Match the casebook's "Firm style" for the case.
+- `library/frameworks/case-flow.md` — the 3-stage flow (Open / Analyze / Close) the candidate should move
+  through. Nudge them toward it (verify problem-vs-goal, hypothesis-driven, answer-first close) without scripting.
+- `library/frameworks/industries/` — `_index.md` + one file per industry. Load the matching one as a prior.
 
 ## Don't
 - Don't reveal Key Facts unprompted, or the answer. You're testing them.
