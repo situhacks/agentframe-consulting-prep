@@ -16,15 +16,18 @@ pixel-perfect document**. Set that expectation with the user: "the markdown is w
 is a starting point you'll finish by hand." Don't burn time trying to make the export look perfect — that's the
 student's manual step, and it's faster than fighting a generator.
 
-## Path A — Google Doc (via Composio) — smoothest
-If Composio + Google Docs are connected (`library/context/connectors.md`), push the markdown to an editable
-Google Doc with **`GOOGLEDOCS_CREATE_DOCUMENT_MARKDOWN`** (`title`, `markdown_text`; SDK: pass
-`dangerously_skip_version_check=True`). Renders headings/bullets reasonably; the user finishes formatting in Docs.
+## Path A — Word .docx (via the `docx` skill) — the default, works out of the box
+Use the vendored `docx` skill (`skills/docx/SKILL.md`, docx-js) — no setup, no connectors needed.
+`example-docx-generator.js` shows the layout; `templates/*.docx` are rendered examples a student can open and
+overtype. Expect a rough first draft — the user copies their content in and styles it themselves. This is the
+path to reach for unless the user specifically wants a Google Doc and has Composio connected.
 
-## Path B — Word .docx (via the `docx` skill)
-Use the vendored `docx` skill (`skills/docx/SKILL.md`, docx-js). `example-docx-generator.js` shows the layout;
-`templates/*.docx` are rendered examples a student can open and overtype. Expect a rough first draft — the user
-copies their content in and styles it themselves.
+## Path B — Google Doc (via Composio) — only if it's connected
+Composio is optional and takes manual per-user setup (`library/context/connectors.md`), so it's usually NOT
+available. **Only use this if the Google Docs tool is actually loaded in your session.** If it is, push the
+markdown to an editable Google Doc with **`GOOGLEDOCS_CREATE_DOCUMENT_MARKDOWN`** (`title`, `markdown_text`; SDK:
+pass `dangerously_skip_version_check=True`). If it isn't, do Path A and offer the Google Doc option: "if you'd
+rather have an editable Google Doc, you can connect Composio — see `library/context/connectors.md`."
 
 ## The honest default to tell the user
 > "Your resume and cover letter are done as markdown — that's the part worth iterating. To finish: copy the

@@ -91,12 +91,17 @@ and fill them yourself — but the on-demand path is easier and the agent handle
 
 ### 5 — Add your own case interviews
 
-The case bank is where you practice, and it starts close to empty because the example casebook is copyrighted
-and can't ship publicly. To load your own, drop a casebook PDF into the project (your school's MCCP case book,
-a practice set, anything you have the rights to use), then tell the agent: *"convert this casebook PDF to
-markdown and add every case to the case tracker."* It'll do the conversion and fill `library/cases/case-tracker.md`
-— the index the agent reads to pick an unrun case and to never serve you the same one twice. After that,
-`run me a case` works against your real cases.
+The case bank ships **empty** — casebooks are copyrighted, so the converted cases and the tracker that indexes
+them are gitignored (only a fictional `case-tracker.EXAMPLE.md` is public, to show the format). Two ways to fill it:
+
+- **SFU MCCP students:** you were handed a workshop bundle (`mccp-case-bundle.zip`). Unzip it into
+  `library/cases/` and you get the real `case-tracker.md` + all the converted cases — `run me a case` just works.
+- **Everyone else (bring your own):** drop a casebook PDF you have the rights to use into `library/cases/originals/`,
+  then tell the agent *"convert this casebook PDF to markdown and add every case to the case tracker."* It writes
+  one file per case under `library/cases/markdown/{book}/` and builds `case-tracker.md` (the index the agent reads
+  to pick an unrun case and never repeat one). If the PDF is a scanned image, it OCRs it first.
+
+After either path, `run me a case` works against your real cases.
 
 ### 6 — Use it
 
@@ -104,7 +109,8 @@ Now just talk to it. A few things to try:
 
 - `run me a case` — it picks a case you haven't done, plays the interviewer, then debriefs you. **Answer out
   loud with voice dictation** — it's practice for the real thing, and it coaches your delivery, not just your
-  content.
+  content. Use a *raw* dictation tool that keeps your filler words (**[Handy](https://handy.computer)** or raw
+  Whisper) rather than the built-in voice typing, which cleans out the "ums" — and the ums are the practice.
 - `tailor my resume to this JD` (paste the job description) — a one-page CV and cover letter, in markdown, in
   your voice.
 - `help me answer "why consulting"` — builds and drills behavioral answers from your own stories.
@@ -118,10 +124,12 @@ Now just talk to it. A few things to try:
 
 ### Optional — connect your tools
 
-Copy `.env.example` to `.env` and drop in a Composio key, and the agent can reach Google Docs, Gmail, and
-Calendar — push a resume straight into a Google Doc, draft a networking email, check your calendar before a
-coffee chat. Everything works without it; this just gives the agent a way out to your real accounts. Setup is in
-[`library/context/connectors.md`](library/context/connectors.md).
+Connect **Composio** and the agent can reach Google Docs, Gmail, and Calendar — push a resume straight into a
+Google Doc, draft a networking email, check your calendar before a coffee chat. Everything works without it; this
+just gives the agent a way out to your real accounts. It's a one-time, ~5-minute manual setup per machine (a key,
+an OAuth, and one `claude mcp add` line) — it isn't auto-wired when you clone, because Composio's connection URL
+is generated per user. Full steps in [`library/context/connectors.md`](library/context/connectors.md). Until you
+set it up, the agent just drafts locally and offers the connector when it'd help.
 
 [Back to top](#agentframe-consulting-prep)
 
@@ -182,7 +190,7 @@ Each skill is a folder with a `SKILL.md`. They're just prompts — read them, re
 | Folder | Holds |
 | --- | --- |
 | `library/context/` | Your CV, stories, positioning, and the `voice/` system (it learns to write like you from your own samples — examples over rules). Filled on first run. |
-| `library/cases/` | The case bank + `case-tracker.md` (the index + no-repeat ledger) |
+| `library/cases/` | The case bank (per-case markdown + the `case-tracker.md` index/no-repeat ledger). Ships empty — copyrighted content is gitignored; you unzip the workshop bundle or bring your own. |
 | `library/frameworks/` | A lean framework index + the evidence-labeling discipline |
 
 [Back to top](#agentframe-consulting-prep)
@@ -216,7 +224,8 @@ over rules, every change traced to what you wanted). Some easy first moves:
 
 - **Rewrite a skill you don't like.** Open its `SKILL.md` and change how it behaves — that's the fastest way to
   learn how the whole thing works, and it's exactly what the `builder` skill is there to help with.
-- **Add cases.** Drop a casebook in, convert it to markdown under `library/cases/`, add rows to `case-tracker.md`.
+- **Add cases.** Drop a casebook PDF in `library/cases/originals/` and ask the agent to convert it — it writes
+  one file per case under `library/cases/markdown/{book}/` and updates `case-tracker.md`.
 - **Teach it your voice.** The `voice/` system learns how you write from your own samples — past cover letters,
   emails, writing you admire — and turns your feedback into before/after pairs (examples beat rules). Build it
   once via `library/context/voice/README.md`, and it gets more *you* every time you correct a draft.
@@ -234,8 +243,10 @@ If you outgrow it, that's the point — you'll have learned enough to build the 
 
 **Composio** is an optional all-in-one tool hub — one connection exposes 100+ tools (Google Docs, Gmail,
 Calendar, Drive, and more). Handy use: push your markdown CV/cover letter into an editable Google Doc, draft a
-networking email in Gmail, or pull a JD from Drive. Everything works without it. Setup:
-[`library/context/connectors.md`](library/context/connectors.md) + [`.env.example`](.env.example).
+networking email in Gmail, or pull a JD from Drive. Everything works without it. It's a one-time ~5-min manual
+setup per machine (key → OAuth → one `claude mcp add` line) — not auto-wired on clone, because Composio mints
+its connection URL per user. Steps: [`library/context/connectors.md`](library/context/connectors.md) +
+[`.env.example`](.env.example).
 
 **Gemini Deep Research** isn't wired in as a connector — the `company-research` skill writes you a
 best-practice research prompt (Google's `<role>/<constraints>/<context>/<task>` structure) that you run in your
@@ -251,10 +262,11 @@ own Gemini Deep Research and paste back. Free-tier friendly, no API key.
 agentframe-consulting-prep/
 ├── AGENTS.md                 # the brain: routing, cold-start onboarding, voice-in, active-case check, connectors
 ├── README.md
-├── .env.example              # optional Composio key
+├── .env.example              # optional Composio connector setup (API key + user id)
 ├── library/
 │   ├── context/              # your CV, stories, voice, positioning, connectors note
-│   ├── cases/                # case bank (copyrighted bodies gitignored) + case-tracker.md
+│   ├── cases/                # case bank (copyrighted bodies gitignored) + case-tracker.EXAMPLE.md
+│   │                         #   markdown/{book}/ + originals/ + the real tracker ship in the workshop zip
 │   └── frameworks/           # frameworks-index + evidence-standards (distilled, credited)
 ├── skills/                   # run-case, case-reviewer, behavioral, cv, cover-letter, company-research,
 │                             #   doc-export, learn, builder, + helpers (docx, humanizer)
