@@ -9,20 +9,28 @@
 # --- Copyrighted case content (NEVER push) ---
 # Ignore everything in library/cases/ ...
 library/cases/*
-# ... but keep the structure-bearing files:
+# ... but keep the structure-bearing, publishable files:
 !library/cases/.gitkeep
 !library/cases/README.md
-!library/cases/case-tracker.md
-
-# Original casebook source files (PDFs, docx, etc.) wherever they land
-library/cases/originals/
-*.casebook.pdf
+!library/cases/case-tracker.EXAMPLE.md
+#
+# NOTE: the REAL case-tracker.md is intentionally NOT un-ignored. It indexes the full list of
+# copyrighted cases (titles, firms, locators), so it stays local and ships in the student zip —
+# only case-tracker.EXAMPLE.md (fictional rows) is public. Same pattern as master-cv.EXAMPLE.md.
+#
+# Also gitignored (ship in the zip, never on GitHub):
+#   library/cases/markdown/   — the 275 converted per-case files
+#   library/cases/originals/  — the source casebook PDFs
 
 # --- Source files with real personal info (never push) ---
 _source-do-not-ship/
 
 # --- Secrets (NEVER push) ---
 .env
+
+# --- The student case bundle (copyrighted content; hand out separately, NEVER push) ---
+mccp-case-bundle.zip
+*-case-bundle.zip
 
 # --- Scratch / stress-test artifacts ---
 _stress-test/
